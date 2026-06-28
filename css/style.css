@@ -1,0 +1,365 @@
+/* ====================
+   IMPORTS
+==================== */
+@import url('https://fonts.googleapis.com/css2?family=Alien+Block&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alien+Block&family=Bitcount+Grid+Double:wght@100..900&family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ====================
+   RESET
+==================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ====================
+   VARIABLES
+==================== */
+:root {
+  /* FONT */
+  --FF: "Montserrat", sans-serif;
+  --FFF: "Cinzel", serif;
+  --FW: 500;
+  --FS: 4rem;
+  --LS: .08em;
+
+  /* COLOR */
+  --COLOR_H1: #d8d8d8;
+  --BGHEADER: #2a1616;
+  --BGCOLOR: linear-gradient(
+    180deg,
+    #2b0d0d 0%,
+    #1a0a0a 30%,
+    #0f0f0f 70%,
+    #000000 100%
+  );
+  --HIGHLIGHT: #bfa15a;
+  --BGCOLOR3: rgba(50, 20, 20, 0.9);
+  --BGCOLORHERO: linear-gradient(
+    180deg,
+    #4a1515 0%,
+    #2b0d0d 50%,
+    transparent 100%
+  );
+  --BGCOLOR4: #e0d0a0;
+
+  /* BORDER */
+  --BORDER: 1px solid #333;
+
+  /* EFFECT */
+  --SHADOW_H1: 0 2px 3px rgba(0,0,0,.6),
+               0 0 8px rgba(255,255,255,.15);
+}
+
+/* ====================
+   GLOBAL STYLES
+==================== */
+body {
+  background: var(--BGCOLOR);
+  font-family: var(--FF);
+}
+
+/* ====================
+   TYPOGRAPHY
+==================== */
+.hero h1 {
+  text-align: center;
+  margin: 0%;
+  font-weight: var(--FW);
+  padding: 1rem;
+  letter-spacing: var(--LS);
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-family: var(--FFF);
+  color: var(--COLOR_H1);
+  text-shadow: var(--SHADOW_H1);
+}
+
+.lore h2 {
+  text-align: center;
+  font-family: var(--FFF);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  color: #e8d8a8;
+  letter-spacing: var(--LS);
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.lore h3 {
+  margin-bottom: 0.75rem;
+  color: var(--BGCOLOR4);
+}
+
+p {
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+  color: white;
+}
+
+.highlight {
+  color: var(--HIGHLIGHT);
+  text-decoration: underline;
+}
+
+/* ====================
+   HEADER
+==================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--BGHEADER);
+  border-bottom: 1px solid #333;
+}
+
+/* ====================
+   NAVIGATION
+==================== */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--BGCOLOR3);
+  padding: 0.5rem 0;
+  border-bottom: var(--BORDER);
+  color: var(--HIGHLIGHT);
+  font-weight: var(--FW);
+}
+
+/* ====================
+   HERO SECTION
+==================== */
+.hero {
+  text-align: center;
+  background: var(--BGCOLORHERO);
+  border-bottom: var(--BORDER);
+}
+
+/* ====================
+   CONTENT SECTIONS
+==================== */
+.lore {
+  padding: 0 2rem;
+}
+
+.return-top {
+  color: var(--HIGHLIGHT);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ====================
+   VIDEO SECTION
+==================== */
+.video-link {
+  text-align: center;
+}
+
+.video-link h2 {
+  margin: 0%;
+  padding: 0.5%;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--FFF);
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  color: #e8d8a8;
+  letter-spacing: var(--LS);
+  white-space: nowrap;
+}
+
+.video-link a {
+  text-align: center;
+  text-decoration: underline;
+  color: var(--HIGHLIGHT);
+  max-width: 1rem;
+  min-width: 0.2rem;
+}
+
+/* ====================
+   FOOTER
+==================== */
+footer {
+  color: var(--HIGHLIGHT);
+  text-align: center;
+  opacity: 50%;
+}
+
+/* ====================
+   BOSSES SECTION
+==================== */
+.boss-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.boss-grid img {
+  display: block;
+  width: clamp(150px, 25vw, 300px);
+  height: auto;
+  border: 3px solid #C9A227;
+  background: #1B1B1B;
+  box-shadow:
+    0 0 8px rgba(201, 162, 39, 0.45),
+    0 0 18px rgba(201, 162, 39, 0.2);
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.boss-card h2 {
+  color: #e8d8a8;
+  text-align: center;
+}
+
+.bosses h1 {
+  font-family: var(--FFF);
+  text-align: center;
+  margin: 0%;
+  margin-bottom: 1rem;
+  font-weight: var(--FW);
+  padding: 2rem;
+  letter-spacing: var(--LS);
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: var(--COLOR_H1);
+  text-shadow: var(--SHADOW_H1);
+}
+
+.bosses {
+  background: var(--BGCOLORHERO);
+}
+
+/* ====================
+   CHARACTERS SECTION
+==================== */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.char-grid img {
+  display: block;
+  width: clamp(150px, 25vw, 300px);
+  height: auto;
+  border: 3px solid #C9A227;
+  background: #1B1B1B;
+  box-shadow:
+    0 0 8px rgba(201, 162, 39, 0.45),
+    0 0 18px rgba(201, 162, 39, 0.2);
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.char-card h2 {
+  color: #e8d8a8;
+  text-align: center;
+}
+
+.characters h1 {
+  font-family: var(--FFF);
+  text-align: center;
+  font-weight: var(--FW);
+  margin: 0%;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  letter-spacing: var(--LS);
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: var(--COLOR_H1);
+  text-shadow: var(--SHADOW_H1);
+}
+
+.characters {
+  background: var(--BGCOLORHERO);
+}
+/* ====================
+   MEDIA QUERIES
+==================== */
+
+/* Phones: up to 320px */
+@media (max-width: 320px) {
+  .boss-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .boss-grid img {
+    width: 150px;
+  }
+
+  .boss-card h2 {
+    font-weight: var(--FW);
+  }
+
+  .char-grid {
+    gap: 1rem;
+  }
+
+  .char-grid img {
+    width: 150px;
+  }
+
+  .char-card h2 {
+    font-weight: var(--FW);
+  }
+}
+
+/* Phones: up to 545px */
+@media (max-width: 545px) {
+  .boss-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .char-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  h1,
+  h2 {
+    font-weight: 400; /* lighter for small phones */
+  }
+}
