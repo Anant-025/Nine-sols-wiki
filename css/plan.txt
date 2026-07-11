@@ -1,0 +1,10 @@
+okay so the plan is to first make ladyE.css 
+
+then copy all the css reset 
+
+then create the html just like you did for the ji.
+
+then the css part...mobile first -- use the css rules you learnt..do some tinkering choose the best thing you could for th responviness.
+
+that's it .
+
